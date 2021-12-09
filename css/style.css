@@ -2,10 +2,12 @@
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700);
 @import url("https://fonts.googleapis.com/css?family=Bai Jamjuree");
 @import url(https://fonts.googleapis.com/css?family=Nunito:400,700);
- :root {
-    /*background: -webkit-linear-gradient(top, #222838 0%, #131621 100%);
-    height: 100vh;*/
-}
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap');
+
+/*:root {
+  background: -webkit-linear-gradient(top, #222838 0%, #131621 100%);
+    height: 100vh;
+}*/
 
 .container {
     width: 334px;
@@ -21,6 +23,8 @@
 
 body {
     background: #333;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 a {
@@ -43,20 +47,79 @@ h2 {
     animation: glow 1s ease-in-out infinite alternate;
 }*/
 
-@keyframes glow {
+.content h1{
+    font-family: 'PT Sans', sans-serif;
+    font-size: 50px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+    animation: colorRotate 1s linear 0s infinite;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: black 2px 2px 10px;
+}
+
+.content img{
+        max-height: 300px;
+}
+
+.cat{         
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content button{
+    margin-top: 10px;
+    background-color:rgba(0, 0, 0, 0.48);
+    color:white;
+    cursor: pointer;
+    height: 40px;
+    border: none;
+    transition: all 0.5s;
+}
+
+.content button:hover{
+    transform: scale(1.05);
+    transition: all 0.5s;
+
+}
+/*
+.cat{
+    background-color:rgba(0, 0, 0, 0.48);
+    border: solid rgba(0, 0, 0, 0.48);
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    height: 360px;
+    transition: all 1s;
+    align-items: center;
+}*/
+
+@keyframes colorRotate {
     from {
-        text-shadow: 0 0px 10px #f6cf41;
+        color: #fda402;
     }
-    to {
-        text-shadow: 0 0px 30px #fda402, 0 0 10px #fda402;
+    50% {
+        color: #f6cf41;
+    }
+    100% {
+        color: #fda402;
     }
 }
+
+
+footer {
+    display: inline-block;
+    margin-top: 600px;
+    }
 
 h2 {
     font-size: 14px;
     margin-bottom: 30px;
     color: #24E2B8;
 }
+
 
 .one,
 .two,
@@ -364,4 +427,38 @@ h2 {
 .six b {
     color: #A9A9A9;
     font-weight: 700;
+}
+
+.active {
+    transform: scale(1.25);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;                                
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+li {
+    float: left;
+    transition: transform 0.1s linear;
+}
+
+li:hover{
+    transform: scale(1.25);
+    transition: transform 0.2s linear;
+}
+
+li a {
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 14px 16px;
+   font-family: "Bai Jamjuree";
+   text-decoration: none;
 }

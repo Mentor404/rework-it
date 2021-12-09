@@ -1,0 +1,104 @@
+<html>
+
+<head>
+    <title>Mentor </title>
+    <link rel="shortcut icon" href="images/icon.ico">
+    <link rel="stylesheet" href="css/nomination.css">
+    <style>
+        body {
+            background-image: url('images/bg.png');
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    </style>  
+</head>
+
+<body>
+
+    <div class="nav-bar">
+        <ul>
+          <li><a href="index.html" rel="noopener noreferrer">Home</a></li>            
+          <li><a href="social.html" rel="noopener noreferrer">Social</a></li>
+          <li class="active"><a href="nomination.html" rel="noopener noreferrer">Nominations</a></li>
+        </ul>
+     </div>
+
+    <div class="container">
+    <h1 class="center-align">
+      Completed Nominations
+    </h1>
+    <input type="text" id="filterInput" placeholder="    Search a specific nomination...">
+    <ul id="names" class="collection with-header">
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/236345385" target="_blank" rel="noopener noreferrer">Character of the Day - @Budwii3245</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/231224599" target="_blank" rel="noopener noreferrer">Character of the Day 2- @hiyori46 and @Meriiiam</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/318622617" target="_blank" rel="noopener noreferrer">Compilation</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/227659564" target="_blank" rel="noopener noreferrer">Ending of the Day - @Budwii3245</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/304324203" target="_blank" rel="noopener noreferrer">Fanart of the day - @Meriiiam</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/303106998" target="_blank" rel="noopener noreferrer">Meme of the day - @EmiyaKun</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/297483057" target="_blank" rel="noopener noreferrer">Opening and Ending of the Day - @yaksaa</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/304326103" target="_blank" rel="noopener noreferrer">Op & Ed Of The Day - @drynfr</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/217445844" target="_blank" rel="noopener noreferrer">Song Of The Day - @Budwii3245</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/299207582" target="_blank" rel="noopener noreferrer">Song Of The Day 2 - @zenith</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/288991768" target="_blank" rel="noopener noreferrer">Top 3 Anime in Summer 2021 - @CelestialQueen</a>
+      </li>
+      <li class="collection-item">
+        <a href="https://anilist.co/activity/291190022" target="_blank" rel="noopener noreferrer">Top 5 Black Haired Characters - @CelestialQueen</a>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    // Get input element
+    let filterInput = document.getElementById('filterInput');
+    // Add event listener
+    filterInput.addEventListener('keyup', filterNames);
+
+    function filterNames(){
+      // Get value of input
+      let filterValue = document.getElementById('filterInput').value.toUpperCase();
+
+      // Get names ul
+      let ul = document.getElementById('names');
+      // Get lis from ul
+      let li = ul.querySelectorAll('li.collection-item');
+
+      // Loop through collection-item lis
+      for(let i = 0;i < li.length;i++){
+        let a = li[i].getElementsByTagName('a')[0];
+        // If matched
+        if(a.innerHTML.toUpperCase().indexOf(filterValue) > -1){
+          li[i].style.display = '';
+        } else {
+          li[i].style.display = 'none';
+        }
+      }
+
+    }
+  </script>
+
+</body>
+
+</html>
