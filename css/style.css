@@ -24,6 +24,7 @@
 body {
     background: #333;
     overflow-y: hidden;
+    margin: 0;
     overflow-x: hidden;
 }
 
@@ -429,6 +430,10 @@ h2 {
     font-weight: 700;
 }
 
+.credit{
+    float: right;
+}
+
 .active {
     transform: scale(1.25);
 }
@@ -452,6 +457,10 @@ li {
 li:hover{
     transform: scale(1.25);
     transition: transform 0.2s linear;
+}
+
+.credit:hover{
+    transform: none;
 }
 
 li a {

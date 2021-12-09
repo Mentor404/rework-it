@@ -5,6 +5,9 @@
     <link rel="shortcut icon" href="images/icon.ico">
     <link rel="stylesheet" href="css/style.css">
     <meta charset=?UTF-8?>
+</head>
+
+<body>
     <style>
         body {
             background-image: url('images/bg.png');
@@ -15,14 +18,13 @@
             background-attachment: fixed;
         }
     </style>
-</head>
 
-<body>
     <div class="nav-bar">
        <ul>
          <li class="active"><a href="index.html" rel="noopener noreferrer">Home</a></li>
          <li><a href="social.html" rel="noopener noreferrer">Social</a></li>
          <li><a href="nomination.html" rel="noopener noreferrer">Nominations</a></li>
+         <li class="credit"><a href="https://twitter.com/SquChan" target="_blank" rel="noopener noreferrer" title="External Page">pfp credits</a></li>
        </ul>
     </div>
 
@@ -30,7 +32,7 @@
         <h1>Mentor404</h1>
         <div class="cat">
         <img id="photo" src="https://thecatapi.com/api/images/get?format=src&type=gif" alt="" title="Meow">
-        <button id="btn">Get Random Cat!</button>
+        <button id="btn">Get Random Kitty</button>
         <script>
             var btn = document.querySelector("#btn");
             var img = document.querySelector("#photo");
@@ -42,16 +44,13 @@
                 if (XHR.readyState == 4 && XHR.status == 200) {
                     img.src = JSON.parse(XHR.responseText).file;  
                 }
-              }
-              XHR.open("GET", "https://aws.random.cat/meow");
-              XHR.send();
+            }
+            XHR.open("GET", "https://aws.random.cat/meow");
+            XHR.send();
             });
         </script>
         </div>
     </div>
-
-
-
 </body>
 
 </html>

@@ -6,7 +6,6 @@
     --sectionWidth: 700px;
   }
 
-
   
 .active{
     transform: scale(1.25);
@@ -54,6 +53,14 @@ div.container{
   border: 1px solid rgba(0,0,0, 0.61);;
   width: 110%;
   }
+
+.credit{
+  float: right !important;
+}
+
+.credit:hover{
+  transform: none !important;
+}
 
 /*!
  * Materialize v0.99.0 (http://materializecss.com)
@@ -2217,6 +2224,7 @@ html {
 body {
   margin: 0;
 }
+
 
 /* HTML5 display definitions
    ========================================================================== */
