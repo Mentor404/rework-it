@@ -11,6 +11,12 @@
     transform: scale(1.25);
 }
 
+.teste{
+  overflow: hidden !important;
+  overflow-y: scroll !important;
+  height: 55%;
+}
+
 .nav-bar ul{
     list-style-type: none;
     margin: 0;
@@ -49,6 +55,7 @@
 div.container{
   background-color: rgba(0,0,0, 0.51);
   max-width: var(--sectionWidth);
+  max-height: var(--sectionHeight);
   margin: 55px auto;
   border: 1px solid rgba(0,0,0, 0.61);;
   width: 110%;
@@ -2223,6 +2230,7 @@ html {
  */
 body {
   margin: 0;
+  overflow: hidden;
 }
 
 
